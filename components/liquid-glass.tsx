@@ -190,6 +190,6 @@ export function LiquidGlass() {
   return <div className="liquid-stage">
     <div className="liquid-fallback" aria-hidden="true"><i/><i/></div>
     <canvas ref={canvasRef} className="liquid-canvas" aria-hidden="true" />
-    <div className="liquid-caption"><span>Move your cursor. Follow the flow.</span><button type="button" aria-label={paused ? 'Play background animation' : 'Pause background animation'} aria-pressed={paused} onClick={() => { pausedRef.current = !paused; setPaused(!paused); }}>{paused ? <Play size={13}/> : <Pause size={13}/>}<span>{paused ? 'Play' : 'Pause'}</span></button></div>
+    <div className="liquid-caption"><button type="button" aria-label={paused ? 'Play background animation' : 'Pause background animation'} aria-pressed={paused} onClick={() => { pausedRef.current = !paused; setPaused(!paused); }}>{paused ? <Play size={13}/> : <Pause size={13}/>}</button></div>
   </div>;
 }
