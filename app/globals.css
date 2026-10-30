@@ -158,7 +158,10 @@ footer img{filter:invert(1);background:transparent;padding:0;box-sizing:border-b
   height: auto;
   aspect-ratio: var(--artwork-ratio);
   transform: translate(-50%, -50%);
-  mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent);
+  mask-image:
+    linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent),
+    linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  mask-composite: intersect;
 }
 
 /* A short arrival sequence follows a skill-category selection. */
@@ -241,4 +244,11 @@ footer {color: #a1b9df}
 }
 @media (prefers-reduced-transparency: reduce) {
   .contact-section {background: #0b1930}
+}
+
+.experience-date {font-size: 16px; line-height: 1.5; color: #c4d3ea}
+.experience-date span {font-size: 14px; font-weight: 500; letter-spacing: .06em; color: #b8cced; margin-top: 10px}
+@media (max-width: 767px) {
+  .experience-date {display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 18px; font-size: 15px}
+  .experience-date span {margin: 0; font-size: 14px}
 }
