@@ -176,3 +176,69 @@ footer img{filter:invert(1);background:transparent;padding:0;box-sizing:border-b
   .skill-panel[data-visible=true] .skill-nodes span {animation: none}
   .skill-nodes span:hover {transform: none}
 }
+
+/* Cobalt atmosphere inspired by the supplied dark-blue reference. */
+:root {--muted: #b0bed7; --line: #253b62}
+body {background: #040817}
+.hero.hero-liquid {
+  background:
+    radial-gradient(ellipse at 105% 30%, #124be391, transparent 58%),
+    radial-gradient(ellipse at -10% 5%, #1b4a9c80, transparent 55%),
+    radial-gradient(ellipse at 40% 105%, #306bce38, transparent 58%),
+    #040817;
+}
+.projects-section, #experience, .github-section {
+  max-width: none;
+  padding-inline: max(64px, calc((100vw - 1192px) / 2));
+}
+.projects-section {
+  background:
+    radial-gradient(ellipse at 110% 30%, #164ed373, transparent 57%),
+    radial-gradient(ellipse at -10% 85%, #164cc457, transparent 56%),
+    linear-gradient(#040817, #050b1c);
+}
+.about-section {
+  background:
+    radial-gradient(ellipse at -15% 40%, #1d56c07a, transparent 59%),
+    radial-gradient(ellipse at 110% 100%, #103baf4a, transparent 62%),
+    #050b1c;
+}
+#experience {
+  background:
+    radial-gradient(ellipse at 105% 68%, #154ad473, transparent 59%),
+    radial-gradient(ellipse at 0% 100%, #2662bb38, transparent 52%),
+    #050b1c;
+}
+.skills-section {
+  background:
+    radial-gradient(ellipse at 108% 15%, #1c55db80, transparent 62%),
+    radial-gradient(ellipse at -10% 100%, #1741b166, transparent 59%),
+    #050b1c;
+  border-block-color: #2e4d7c;
+}
+.github-section {
+  background:
+    radial-gradient(ellipse at 0% 35%, #1648b666, transparent 60%),
+    radial-gradient(ellipse at 110% 100%, #2055ca57, transparent 62%),
+    linear-gradient(#050b1c, #040817);
+}
+.contact-section {
+  background:
+    radial-gradient(ellipse at 108% 100%, #1a52c999, transparent 66%),
+    radial-gradient(ellipse at 0% 0%, #2855984d, transparent 55%),
+    linear-gradient(130deg, #0b1830, #070e20);
+  border-color: #527ab680;
+}
+.project-copy p {color: #b2c0d8}
+.section-heading p {color: #a7bddf}
+.hero-liquid .hero-copy > p {color: #bdcee9}
+.community article > span, .education span {color: #acc2e1}
+.project-diagram {border-color: #4e76ad80}
+.skill-nodes span {border-color: #537ab480}
+footer {color: #a1b9df}
+@media (max-width: 767px) {
+  .projects-section, #experience, .github-section {padding-inline: 24px}
+}
+@media (prefers-reduced-transparency: reduce) {
+  .contact-section {background: #0b1930}
+}
