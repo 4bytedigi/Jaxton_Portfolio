@@ -258,3 +258,52 @@ footer {color: #a1b9df}
 .experience ul {padding: 0; margin: 0; list-style: none; font-size: 16px; line-height: 1.8; max-width: 72ch}
 .experience li {padding: 0; margin-bottom: 14px}
 .experience .role {font-size: 16px; line-height: 1.6}
+
+/* Match the readable internship copy across the rest of the website. */
+:root {--copy-size: 16px; --label-size: 14px; --meta-size: 13px}
+body {font-size: var(--copy-size)}
+.hero-liquid .hero-copy > p,
+.project-copy p,
+.section-heading p,
+.section-heading > div > p,
+.about-content > p:not(.large-copy),
+.education p,
+.community p,
+.skill-panel p,
+.repo-list p,
+.github-empty p,
+.contact-section p,
+.detail-body p {font-size: var(--copy-size); line-height: 1.8}
+.category, .tags > span, .education span, .community article > span, .repo-list small, .next-project > span {font-size: var(--meta-size)}
+.education p.award {font-size: var(--label-size)}
+.education h3, .community h4 {font-size: 20px}
+.nav, .resume-link, .inline-link, .contact-links, .copy-email button, .copy-email > span, .github-empty > a, .previous-project, .whatsapp-button {font-size: var(--label-size)}
+.hero-liquid .primary, .hero-liquid .text-button {font-size: var(--label-size)}
+.skill-tabs button {font-size: 17px}
+.skill-nodes span {font-size: 17px; max-width: 100%}
+.project-flow li > div, .project-artwork-motion-control {font-size: var(--label-size)}
+.concept-note {font-size: 12px; line-height: 1.4; max-width: calc(100% - 100px)}
+.state-label {font-size: 16px; bottom: 64px; right: 80px}
+.state-label > span {font-size: 11px}
+footer {font-size: 12px; line-height: 1.6}
+@media (max-width: 1023px) and (min-width: 768px) {
+  .menu-button {display: flex}
+  .nav {display: none; position: absolute; top: 99px; left: 0; right: 0; background: #081123; flex-direction: column; padding: 20px 35px; border-block: 1px solid var(--line); gap: 0}
+  .nav.open {display: flex}
+  .nav a {padding: 13px 0}
+  .resume-link {margin-left: auto; margin-right: 14px}
+}
+@media (max-width: 767px) {
+  .hero-liquid .hero-actions {flex-wrap: wrap}
+  .skill-tabs button {font-size: var(--label-size)}
+  .skill-nodes span {font-size: var(--copy-size)}
+  .detail-title p {font-size: var(--copy-size)}
+}
+@media (max-width: 380px) {
+  .header {padding-inline: 18px}
+  .brand {gap: 8px; flex-shrink: 0}
+  .brand img:first-child {width: 40px}
+  .brand .wordmark {width: 75px}
+  .resume-link {padding-inline: 10px; gap: 6px; margin-right: 8px}
+  .menu-button {flex-shrink: 0}
+}
