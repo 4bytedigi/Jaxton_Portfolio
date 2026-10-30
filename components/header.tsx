@@ -31,7 +31,7 @@ export function Header() {
     if (event.key === 'Escape') { setOpen(false); menuRef.current?.focus(); }
   }}>
     <Link href="/" aria-label="Jazton home" className="brand">
-      <Image src="/brand/mark.png" alt="JT" unoptimized width={75} height={27} priority/>
+      <Image src="/brand/jt-logo.png" alt="JT" unoptimized width={75} height={27} priority/>
       <Image className="wordmark" src="/brand/wordmark.png" alt="Jazton" unoptimized width={112} height={12} priority/>
     </Link>
     <nav id="main-navigation" aria-label="Main navigation" className={open?'nav open':'nav'}>
