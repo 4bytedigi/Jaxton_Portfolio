@@ -1,5 +1,6 @@
-import {ArrowRight,Radio,Cpu,Wifi,Server,Monitor,TrafficCone,Timer,PersonStanding,Bus,Users,Route,FileOutput} from 'lucide-react';
+import {ArrowRight,Radio,Cpu,Wifi,Server,Monitor,TrafficCone,Timer,PersonStanding,Bus,Users,Route,FileOutput,LogIn,Database,Search,Save} from 'lucide-react';
 const flows={
+ cms:[{name:'Login',icon:LogIn},{name:'Load records',icon:Database},{name:'Manage students',icon:Search},{name:'Save changes',icon:Save}],
  iot:[{name:'Reed switch',icon:Radio},{name:'ESP32-C3',icon:Cpu},{name:'Wi-Fi',icon:Wifi},{name:'Raspberry Pi',icon:Server},{name:'Web interface',icon:Monitor}],
  traffic:[{name:'IR detection',icon:TrafficCone},{name:'Four-state FSM',icon:Cpu},{name:'Timed signals',icon:Timer},{name:'Pedestrian controls',icon:PersonStanding}],
  route:[{name:'Passenger requests',icon:Users},{name:'Shuttle capacity',icon:Bus},{name:'Scheduling',icon:Route},{name:'Route plan export',icon:FileOutput}]
