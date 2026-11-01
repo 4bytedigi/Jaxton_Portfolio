@@ -317,3 +317,18 @@ footer {font-size: 12px; line-height: 1.6}
 .cms-screenshots figcaption {margin-top:12px;color:var(--muted);font-size:var(--label-size);line-height:1.6}
 .cms-screenshots figcaption a {display:block;width:fit-content;min-height:44px;padding-block:8px;color:#9dc0f3;text-decoration:underline;text-underline-offset:4px}
 .cms-node {fill:#c6f5ff;opacity:.3;animation:iot-led-pulse 3.8s ease-in-out infinite paused}
+
+/* Keep the traffic legend separate from the intersection at every card size. */
+.project-diagram.traffic {container-type:inline-size}
+.traffic-layout {display:grid;grid-template-columns:minmax(0,1fr) 220px;height:100%}
+.traffic-scene {position:relative;min-width:0;min-height:0;overflow:hidden}
+.traffic-caption {display:flex;flex-direction:column;justify-content:center;padding:24px;min-width:0}
+.traffic-caption .state-label {position:static;text-align:left;background:none;padding:0;font-size:16px;line-height:1.5;white-space:nowrap}
+.traffic-caption .state-label > span {white-space:normal;font-size:12px;line-height:1.5;margin-top:6px}
+.traffic-caption .concept-note {position:static;max-width:none;margin-top:24px;font-size:12px;line-height:1.5}
+@container (max-width:600px) {
+  .traffic-layout {grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) auto}
+  .traffic-caption {padding:14px 20px}
+  .traffic-caption .state-label > span {margin-top:2px}
+  .traffic-caption .concept-note {margin-top:6px}
+}
