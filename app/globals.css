@@ -48,7 +48,7 @@ footer img{filter:invert(1);background:transparent;padding:0;box-sizing:border-b
 .detail > .project-diagram.animated-project-artwork {height: auto}
 .project-artwork-image {display: block; width: 100%; height: 100%; object-fit: contain}
 .project-artwork-signals {position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none}
-.iot-signal {
+:is(.iot-signal, .cms-signal) {
   stroke: #c7f6ff;
   stroke-width: 3;
   stroke-linecap: round;
@@ -111,7 +111,7 @@ footer img{filter:invert(1);background:transparent;padding:0;box-sizing:border-b
 @keyframes iot-led-pulse {0%, 100% {opacity: .3} 40%, 60% {opacity: .9}}
 @media (hover: hover) and (pointer: fine) {
   .animated-project-artwork:hover .project-artwork-pointer-light {opacity: 1}
-  .animated-project-artwork:hover :is(.iot-signal, .shuttle-signal) {stroke: #f2fdff}
+  .animated-project-artwork:hover :is(.iot-signal, .shuttle-signal, .cms-signal) {stroke: #f2fdff}
 }
 @media (max-width: 767px) {
   .project-artwork-motion-control {bottom: 8px; right: 8px; min-width: 70px; padding: 6px 10px; font-size: 11px}
@@ -307,3 +307,13 @@ footer {font-size: 12px; line-height: 1.6}
   .resume-link {padding-inline: 10px; gap: 6px; margin-right: 8px}
   .menu-button {flex-shrink: 0}
 }
+
+/* Original console media for the C student-records project. */
+.detail-body .cms-evidence {align-items:start}
+.cms-screenshots {min-width:0;display:grid;gap:32px}
+.cms-screenshots figure {margin:0;min-width:0}
+.cms-screenshots figure > a {display:block}
+.cms-screenshots img {display:block;width:100%;height:auto}
+.cms-screenshots figcaption {margin-top:12px;color:var(--muted);font-size:var(--label-size);line-height:1.6}
+.cms-screenshots figcaption a {display:block;width:fit-content;min-height:44px;padding-block:8px;color:#9dc0f3;text-decoration:underline;text-underline-offset:4px}
+.cms-node {fill:#c6f5ff;opacity:.3;animation:iot-led-pulse 3.8s ease-in-out infinite paused}
